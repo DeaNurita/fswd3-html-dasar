@@ -1,0 +1,91 @@
+body{
+    background-color: aquamarine;
+}
+span{
+    display: inline-block;
+}
+h4{
+    text-align: center;
+}
+h2{
+    visibility: hidden;
+}
+p{
+    text-align: center;
+    text-decoration: dotted;
+}
+img{
+    border-top-right-radius: 10px;
+    border-bottom-left-radius: 10px;
+}
+.header{
+    text-align: center;
+}
+.baris1{
+    align-items: center;
+    text-align: center;
+}
+.baris2{
+    align-items: center;
+    text-align: center;
+}
+.card{
+    width: 200px;
+    height: 300px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 14px;
+    background-color: deeppink;
+}
+.card1{
+    width: 200px;
+    height: 300px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 14px;
+    background-color: deeppink;
+}
+.card2{
+    width: 200px;
+    height: 300px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 14px;
+    background-color: deeppink;
+}
+.card3{
+    width: 200px;
+    height: 300px;
+    border-style: solid;
+    border-color: black;
+    border-radius: 14px;
+    background-color: deeppink;
+}
+.card4{
+    width: 200px;
+    height: 300px;
+    border-style: solid;
+    border-radius: 14px;
+    background-color: darkorange;
+}
+.card5{
+    width: 200px;
+    height: 300px;
+    border-style: solid;
+    border-radius: 14px;
+    background-color: darkorange;
+}
+.card6{
+    width: 200px;
+    height: 300px;
+    border-style: solid;
+    border-radius: 14px;
+    background-color: darkorange;
+}
+.card7{
+    width: 200px;
+    height: 300px;
+    border-style: solid;
+    border-radius: 14px;
+    background-color: darkorange;
+}
