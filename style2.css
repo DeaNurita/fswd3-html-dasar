@@ -60,11 +60,11 @@ body{
     background-color: skyblue;
 }
 .item8{
-    grid-column: 1/3;
+    grid-column: 1/4;
     background-color: yellow;
 }
 .item9{    
-    grid-column: 3/5;
+    grid-column: 4/5;
     background-color: orangered;
 }
 .item10{
