@@ -39,7 +39,7 @@ const displayTasks = () => {
     //localstorage would store boolean as string so we parse it to boolean back
     let editButton = document.createElement("button");
     editButton.classList.add("edit");
-    editButton.innerHTML = `<button<i class="bi bi-pencil-square"></i>/button>`;
+    editButton.innerHTML = `<i class="bi bi-pencil-square"></i>`;
     if (!JSON.parse(value)) {
       editButton.style.visibility = "visible";
     } else {
@@ -47,7 +47,7 @@ const displayTasks = () => {
       taskInnerDiv.classList.add("completed");
     }
     taskInnerDiv.appendChild(editButton);
-    taskInnerDiv.innerHTML += `<button<i class="bi bi-trash-fill"></i>/button>`;
+    taskInnerDiv.innerHTML += `<i class="bi bi-trash-fill"></i>`;
     tasksDiv.appendChild(taskInnerDiv);
   }
 
