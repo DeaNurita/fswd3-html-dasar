@@ -47,7 +47,7 @@ const displayTasks = () => {
       taskInnerDiv.classList.add("completed");
     }
     taskInnerDiv.appendChild(editButton);
-    taskInnerDiv.innerHTML += `<i class="bi bi-trash-fill"></i>`;
+    taskInnerDiv.innerHTML += `<button class="delete"><i class="bi bi-trash-fill"></i></button>`;
     tasksDiv.appendChild(taskInnerDiv);
   }
 
