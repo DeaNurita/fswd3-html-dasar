@@ -138,3 +138,81 @@ document.querySelector("#push").addEventListener("click", () => {
     newTaskInput.value = "";
   }
 });
+
+//fetch
+const baseUrl = "https://crudcrud.com/api/";
+const apiKey = "cb485186e03a412bbab0fcf42abd7f8f";
+const url = baseUrl + apiKey;
+const endpointTasks = `${url}/tasks`;
+
+const handleError = (error) => console.log(error);
+const handleSuccess = (result) => console.log(result);
+
+// GET semua data
+function addItem() {
+  const tasksDiv = document.querySelector("#tasks");
+  const inputValue = document.getElementById("input").value;  
+  const data = {tasks: inputValue, checked: false}
+
+  if (inputValue === "") {
+    alert ("list tidak boleh kosong!");
+    return false;
+  } else {
+    let li = document.createElement("li");
+    li.className = "list-group-item";
+    li.innerText = todo.title
+    tasksDiv.appendChild(data);
+    addTask(data); 
+  }
+  input = "";
+}
+
+// POST data/ menambah data
+const addTask = (data) => {
+  fetch(endpointTasks, {
+    method: "POST",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(tasks),
+  })
+    .then(handleSuccess)
+    .catch(handleError);
+};
+
+// DELETE data
+const deleteTask = (id) => {
+  fetch(`${endpointTasks}/${id}`, {
+    method: "DELETE",
+  })
+    .then(handleSuccess)
+    .catch(handleError);
+};
+
+var totalItem = [];
+window.onload = loadItem();
+
+// PUT data/ update data
+const updateTask = (id, tasks) => {
+  fetch(`${endpointTasks}/${id}`, {
+    method: "PUT",
+    headers: {
+      "Content-Type": "application/json",
+    },
+    body: JSON.stringify(tasks),
+  })
+    .then(handleSuccess)
+    .catch(handleError);
+};
+
+//loadTask
+function loadItem() {  
+  fetch(endpointTasks) 
+  .then((response) => response.json())
+  .then((data) => {
+      tasks = data;
+      tasks.forEach((data) => {
+          addTask (data);
+      });        
+  });
+}
